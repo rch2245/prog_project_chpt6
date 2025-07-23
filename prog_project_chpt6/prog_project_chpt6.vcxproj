@@ -126,11 +126,18 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CelsiusTemperatureTable.h" />
+    <ClInclude Include="PaintJobEstimator.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="RectangleProperties.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="SafestDrivingArea.h" />
+    <ClInclude Include="StarSearch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="CelsiusTemperatureTable.cpp" />
+    <ClCompile Include="PaintJobEstimator.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -138,6 +145,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="prog_project_chpt6.cpp" />
+    <ClCompile Include="RectangleProperties.cpp" />
+    <ClCompile Include="SafestDrivingArea.cpp" />
+    <ClCompile Include="StarSearch.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="app.ico" />
