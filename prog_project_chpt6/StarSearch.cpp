@@ -41,9 +41,6 @@
 #include <iomanip>
 #include <limits>
 
-#include <iostream>
-#include <iomanip>
-#include <limits>
 
 // Function Prototypes
 double getScore(int judgeNumber);
