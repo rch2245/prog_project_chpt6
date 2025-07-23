@@ -41,8 +41,12 @@
 #include <iomanip>
 #include <limits>
 
+#include <iostream>
+#include <iomanip>
+#include <limits>
+
 // Function Prototypes
-double getScore();
+double getScore(int judgeNumber);
 bool isLower(double a, double b);
 bool isHigher(double a, double b);
 double calcAverage(double total, double minScore, double maxScore);
@@ -56,14 +60,14 @@ void runStarSearch() {
     std::cout << "Enter scores for " << NUM_JUDGES << " judges (0.0 to 10.0):\n";
 
     // First score initializes min and max
-    score = getScore();
+    score = getScore(1); // Judge #1
     total = score;
     minScore = score;
     maxScore = score;
 
     // Process remaining scores
     for (int i = 2; i <= NUM_JUDGES; i++) {
-        score = getScore();
+        score = getScore(i); // Judge #i
         total += score;
 
         if (isLower(score, minScore)) {
@@ -78,13 +82,12 @@ void runStarSearch() {
 
     std::cout << std::fixed << std::setprecision(2);
     std::cout << "\nFinal Score (after dropping highest and lowest): " << finalAverage << "\n";
-
-    return;
 }
 
-double getScore() {
+// Updated getScore to take judgeNumber as input
+double getScore(int judgeNumber) {
     double score;
-    std::cout << "Enter judge's score (0–10): ";
+    std::cout << "Enter score for Judge #" << judgeNumber << " (0 to 10): ";
     while (!(std::cin >> score) || score < 0.0 || score > 10.0) {
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
