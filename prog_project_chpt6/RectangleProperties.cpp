@@ -40,6 +40,7 @@
 //     Ask user if they want to process another rectangle
 // Until user chooses to quit
 
+#include "pch.h"
 #include <iostream>
 #include <iomanip>
 #include <limits>

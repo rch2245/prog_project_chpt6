@@ -36,7 +36,7 @@
 // finalAverage = calcAverage(total, minScore, maxScore)
 // Display finalAverage
 
-
+#include "pch.h"
 #include <iostream>
 #include <iomanip>
 #include <limits>
